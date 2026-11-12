@@ -126,7 +126,7 @@
 <div class="app"><header class="topbar"><div class="brand"><div class="brand-mark"><i></i><i></i><b></b></div><div><h1>奶蛙快跑 <span>寄蟲跑考</span></h1><p>MILK FROG / CHRISTMAS RUN</p></div></div><div class="header-stats"><div><small>收集分數</small><strong id="score">0</strong></div><div><small>距離</small><strong id="distance">0 <em>m</em></strong></div><div><small>答對 / 作答</small><strong id="round">0 <em>/ 0</em></strong></div></div><div class="header-buttons"><button id="sound" class="icon-button" aria-label="關閉聲音" aria-pressed="true">♪<span>聲音開</span></button><button id="pause" class="icon-button" aria-label="暫停遊戲" disabled>Ⅱ<span>暫停</span></button><button id="fullscreen" class="icon-button" aria-label="全螢幕">⛶</button></div></header>
 <main class="arena" id="arena" aria-label="奶蛙第三人稱鐵道跑酷"><canvas id="world" aria-label="三線鐵軌、列車與牛來追逐"></canvas><div class="vignette"></div>
 <div class="scene-label"><i></i><div>聖誕雪夜列車場<small>CHRISTMAS RAILWAY / 03</small></div></div><div class="best-label" id="best">最佳 0 分</div>
-<section class="intro" id="intro"><div class="eyebrow"><i></i>CHRISTMAS RUN · 寄蟲跑考</div><h2>牛來了，<br><span>快跑！</span></h2><p>穿越聖誕雪夜，爬上列車、滑過柵欄。<br>一邊閃列車，一邊用所在軌道回答寄生蟲。</p><button class="primary" id="start" disabled><span id="start-label">正在準備鐵道…</span><b>↗</b></button><p id="loading-hint" class="loading-hint">若停在這裡，請用 Safari／Chrome 開啟遊戲網址。附件預覽可能無法執行遊戲。</p><button id="compatible" class="text-button compatibility">切換相容模式</button><div class="start-instructions"><span><kbd>← →</kbd> 換道</span><span><kbd>↑</kbd> 跳躍</span><span><kbd>↓</kbd> 滑行</span><span><kbd>B</kbd> 滑板</span></div><p class="touch-hint">手機／平板：左右滑換道 · 上滑跳躍 · 下滑滑行<br>雙擊遊戲畫面啟動滑板，或按右側滑板鍵</p><div class="crew"><div><img id="portrait-egg" alt="奶蛋"><span>奶蛋<b>+100</b></span></div><div><img id="portrait-bean" alt="奶豆"><span>奶豆<b>+50</b></span></div><span class="photo-count">31 張照片<br>循環挑戰</span></div><p class="intro-rule">速度 1.65 → 3.5 → 4 倍；約 3 分鐘到 3.5 倍、10 分鐘到 4 倍<br>追逐從 10 秒起，碰撞或答錯每次累計增加 1 秒；追逐中再失誤就結束。<br>五種道具 · 列車漸密並混合長列車 · 作答保留柵欄與收集物</p></section>
+<section class="intro" id="intro"><div class="eyebrow"><i></i>CHRISTMAS RUN · 寄蟲跑考</div><h2>牛來了，<br><span>快跑！</span></h2><p>穿越聖誕彎道，爬上列車、躍上隧道與橋頂。<br>一邊閃列車，一邊用所在軌道回答寄生蟲。</p><button class="primary" id="start" disabled><span id="start-label">正在準備鐵道…</span><b>↗</b></button><p id="loading-hint" class="loading-hint">若停在這裡，請用 Safari／Chrome 開啟遊戲網址。附件預覽可能無法執行遊戲。</p><button id="compatible" class="text-button compatibility">切換相容模式</button><div class="start-instructions"><span><kbd>← →</kbd> 換道</span><span><kbd>↑</kbd> 跳躍</span><span><kbd>↓</kbd> 滑行</span><span><kbd>B</kbd> 滑板</span></div><p class="touch-hint">手機／平板：左右滑換道 · 上滑跳躍 · 下滑滑行<br>雙擊遊戲畫面啟動滑板，或按右側滑板鍵</p><div class="crew"><div><img id="portrait-egg" alt="奶蛋"><span>奶蛋<b>+100</b></span></div><div><img id="portrait-bean" alt="奶豆"><span>奶豆<b>+50</b></span></div><span class="photo-count">31 張照片<br>循環挑戰</span></div><p class="intro-rule">速度 1.65 → 3.5 → 4 倍；約 3 分鐘到 3.5 倍、10 分鐘到 4 倍<br>追逐從 10 秒起，碰撞或答錯每次累計增加 1 秒；追逐中再失誤就結束。<br>彎道視角 · 隧道與橋頂可踩 · 彈跳鞋跳上屋頂收集奶蛋</p></section>
 <div id="run-hud" class="run-hud" hidden><div id="run-message">閃列車 · 跳路障 · 滑橫桿</div><div class="run-progress"><i id="progress-fill"></i></div><p id="run-detail">收集奶蛋、奶豆，越跑越快</p></div>
 <aside class="speed-card" id="speed-card" hidden aria-label="目前奔跑速度"><div><span id="speed-label">逐步加速</span><strong id="speed-value">1.65×</strong></div><div class="speed-meter"><i id="speed-fill"></i></div><small>奶蛋 +100 · 奶豆 +50</small></aside>
 <aside class="chase-card" id="chase-card" hidden><div class="chase-top"><div class="chase-avatar"><img id="portrait-bull" alt="追捕者牛來"></div><div><small>追捕者 / 牛來</small><strong id="chase-label">牛來在後方</strong></div></div><div class="chase-meter"><i id="chase-fill"></i></div><p id="chase-help">避開障礙，保持距離</p></aside>
@@ -25230,6 +25230,10 @@ void main() {
   function or(i) {
     return ui;
   }
+  // Keep landing physics on the visible snow/deck surface in both renderers.
+  function structureRoofHeight(i) {
+    return i.clearance + (i.type === "bridge" ? 0.67 : 1.125);
+  }
   function ir(i, e) {
     let t = or(i),
       A = i.rampLength ?? Qt;
@@ -25560,6 +25564,18 @@ void main() {
             this.obstacles.push(obstacle);
             events.push({kind: "obstacle", obstacle});
           }
+          // A modest, separate rooftop trail rewards a flight landing or a
+          // sneaker jump without moving the normal ground-level collectibles.
+          let row = 0;
+          for (let offset = 5; offset < length - 3; offset += 11) {
+            const item = {
+              id: ++this.itemId, type: "egg", lane: row++ % 3,
+              distance: structure.distance + offset,
+              elevation: structureRoofHeight(structure), roofId: structure.id
+            };
+            this.items.push(item);
+            events.push({kind: "spawn", item});
+          }
         }
         this.nextStructureAt = this.runTime + (allowed
           ? 20 - difficulty * 10 + this.rng() * 4 : 1.6 + this.rng() * 0.5);
@@ -25650,6 +25666,19 @@ void main() {
           ? this.height
           : this.height + (this.verticalVelocity - MG * e) * e;
         for (let a of this.obstacles) {
+          if (a.type === "tunnel" || a.type === "bridge") {
+            const top = structureRoofHeight(a),
+              overDeck = this.distance >= a.distance &&
+                this.distance <= a.distance + a.length,
+              supported = this.grounded && this.supportId === a.id,
+              aboveDeck = this.height >= top - 0.02;
+            // Only feet already above the slab can land. A player below it
+            // must never snap through the ceiling onto the walking surface.
+            if (overDeck && (aboveDeck || supported) && top >= n) {
+              n = top; o = a.id; s = supported;
+            }
+            continue;
+          }
           if (a.type !== "train") continue;
           let r = (a.width ?? 2.13) / 2 / Ct;
           if (Math.abs(this.laneX - (a.lane - 1)) > r + 0.02) continue;
@@ -25853,8 +25882,7 @@ void main() {
           this.powers[g] = Math.max(0, this.powers[g] - e);
         o &&
           this.powers.jetpack === 0 &&
-          (this.recover(t, !0),
-          (this.action = "jump"),
+          ((this.action = "jump"),
           (this.verticalVelocity = -6),
           (this.flightLanding = 2),
           (this.invulnerable = 2),
@@ -25918,6 +25946,7 @@ void main() {
             if (
               (h
                 ? (w =
+                    this.height >= structureRoofHeight(g) - 0.03 ||
                     this.height + (this.action === "slide" ? 1.03 : 2.45) <
                     g.clearance)
                 : g.type === "train"
@@ -25927,7 +25956,7 @@ void main() {
                         this.distance < g.distance &&
                         this.height >= (ir(g, this.distance) ?? or(g)) - 0.15))
                   : g.type === "pillar"
-                    ? (w = false)
+                    ? (w = this.height >= (g.height || 6.9) - 0.03)
                   : (w =
                       g.type === "barrier"
                         ? this.height > 1.03
@@ -25999,6 +26028,223 @@ void main() {
           : ((this.overTime = Ii), (this.danceStarted = !0), !0);
       }
     };
+// Rendering follows one deterministic centerline. The model keeps longitudinal
+// distance/lane coordinates so the visible bend and collision footprints agree.
+var TRACK_CURVE_HALF = 480, TRACK_CURVE_PERIOD = 960;
+function trackCurveSample(distance) {
+  const phase = ((distance % TRACK_CURVE_PERIOD) + TRACK_CURVE_PERIOD) % TRACK_CURVE_PERIOD,
+    half = phase >= TRACK_CURVE_HALF, local = phase % TRACK_CURVE_HALF,
+    u = Math.max(0, Math.min(1, (local - 70) / 340)),
+    smooth = u * u * u * (10 + u * (-15 + 6 * u)),
+    derivative = 30 * u * u * (1 - u) * (1 - u),
+    x = 80 * (half ? 1 - smooth : smooth),
+    slope = (half ? -1 : 1) * 80 / 340 * derivative;
+  return {x, slope, heading: -Math.atan(slope)};
+}
+function trackBendPosition(point, distance, out = {}) {
+  const origin = trackCurveSample(distance), sample = trackCurveSample(distance - point.z),
+    normal = 1 / Math.sqrt(1 + sample.slope * sample.slope),
+    c = 1 / Math.sqrt(1 + origin.slope * origin.slope), s = origin.slope * c,
+    x = sample.x - origin.x + point.x * normal,
+    z = point.z + point.x * sample.slope * normal;
+  out.x = c * x + s * z;
+  out.y = point.y;
+  out.z = -s * x + c * z;
+  return out;
+}
+function trackCameraElevation(view, state, seconds) {
+  // A normal hop keeps the familiar horizon. High sneaker jumps and walking
+  // off a roof keep the actor in frame instead of instantly dropping to road.
+  const desired = Math.max(state.groundHeight || 0, (state.height || 0) - 2.25);
+  if (!Number.isFinite(view.trackElevation) || state.state === 'ready')
+    view.trackElevation = desired;
+  else view.trackElevation += (desired - view.trackElevation) *
+    (1 - Math.exp(-Math.max(0, seconds) * 6));
+  return view.trackElevation;
+}
+var trackCurveUniforms = {trackCurveFrame:{value:{x:0,y:0,z:1,w:0}}};
+function setTrackCurveDistance(distance) {
+  const phase = ((distance % TRACK_CURVE_PERIOD) + TRACK_CURVE_PERIOD) % TRACK_CURVE_PERIOD,
+    origin = trackCurveSample(phase), c = 1 / Math.sqrt(1 + origin.slope * origin.slope),
+    frame = trackCurveUniforms.trackCurveFrame.value;
+  frame.x = phase; frame.y = origin.x; frame.z = c; frame.w = origin.slope * c;
+}
+var trackCurveShader = `
+uniform vec4 trackCurveFrame;
+vec2 milkTrackSample(float distance) {
+  float phase = mod(mod(distance, 960.0) + 960.0, 960.0);
+  bool secondHalf = phase >= 480.0;
+  float u = clamp((mod(phase, 480.0) - 70.0) / 340.0, 0.0, 1.0);
+  float curveBlend = u*u*u*(10.0 + u*(-15.0 + 6.0*u));
+  float derivative = 30.0*u*u*(1.0-u)*(1.0-u);
+  return vec2(80.0*(secondHalf ? 1.0-curveBlend : curveBlend),
+    (secondHalf ? -1.0 : 1.0)*(80.0/340.0)*derivative);
+}
+vec3 milkTrackBend(vec3 point) {
+  vec2 curveSample = milkTrackSample(trackCurveFrame.x-point.z);
+  float normal = inversesqrt(1.0+curveSample.y*curveSample.y);
+  float x = curveSample.x-trackCurveFrame.y+point.x*normal;
+  float z = point.z+point.x*curveSample.y*normal;
+  return vec3(trackCurveFrame.z*x+trackCurveFrame.w*z, point.y,
+    -trackCurveFrame.w*x+trackCurveFrame.z*z);
+}
+vec3 milkTrackNormal(vec3 normal, vec3 point) {
+  float slope = milkTrackSample(trackCurveFrame.x-point.z).y;
+  float c = inversesqrt(1.0+slope*slope), s = -slope*c;
+  float cosine = trackCurveFrame.z*c-trackCurveFrame.w*s;
+  float sine = trackCurveFrame.w*c+trackCurveFrame.z*s;
+  return vec3(cosine*normal.x+sine*normal.z, normal.y,
+    -sine*normal.x+cosine*normal.z);
+}
+`;
+var trackCurveProject = `
+vec4 mvPosition = vec4(transformed, 1.0);
+#ifdef USE_BATCHING
+  mvPosition = batchingMatrix * mvPosition;
+#endif
+#ifdef USE_INSTANCING
+  mvPosition = instanceMatrix * mvPosition;
+#endif
+mvPosition = modelMatrix * mvPosition;
+mvPosition.xyz = milkTrackBend(mvPosition.xyz);
+mvPosition = viewMatrix * mvPosition;
+gl_Position = projectionMatrix * mvPosition;
+`;
+var trackPreparedMaterials = new WeakSet();
+function installTrackMaterial(material) {
+  if (!material || trackPreparedMaterials.has(material)) return;
+  trackPreparedMaterials.add(material);
+  const previous = material.onBeforeCompile, cacheKey = material.customProgramCacheKey;
+  material.onBeforeCompile = function(shader, renderer) {
+    if (previous) previous.call(this, shader, renderer);
+    Object.assign(shader.uniforms, trackCurveUniforms);
+    shader.vertexShader = trackCurveShader + shader.vertexShader
+      .replace('#include <project_vertex>', trackCurveProject)
+      .replace('#include <worldpos_vertex>', `#include <worldpos_vertex>
+#if defined( USE_ENVMAP ) || defined( DISTANCE ) || defined( USE_SHADOWMAP ) || defined( USE_TRANSMISSION ) || NUM_SPOT_LIGHT_COORDS > 0
+worldPosition.xyz = milkTrackBend(worldPosition.xyz);
+#endif`)
+      .replace('#include <defaultnormal_vertex>', `#include <defaultnormal_vertex>
+vec4 milkNormalPoint = vec4(position, 1.0);
+#ifdef USE_BATCHING
+  milkNormalPoint = batchingMatrix * milkNormalPoint;
+#endif
+#ifdef USE_INSTANCING
+  milkNormalPoint = instanceMatrix * milkNormalPoint;
+#endif
+milkNormalPoint = modelMatrix * milkNormalPoint;
+vec3 milkWorldNormal = inverseTransformDirection(transformedNormal, viewMatrix);
+transformedNormal = mat3(viewMatrix) * milkTrackNormal(milkWorldNormal, milkNormalPoint.xyz);
+#ifdef USE_TANGENT
+vec3 milkWorldTangent = inverseTransformDirection(transformedTangent, viewMatrix);
+transformedTangent = mat3(viewMatrix) * milkTrackNormal(milkWorldTangent, milkNormalPoint.xyz);
+#endif`);
+  };
+  material.customProgramCacheKey = function(){return cacheKey.call(this)+'|milk-track-v6';};
+  material.needsUpdate = true;
+}
+var trackGeometryCache = new WeakMap(), trackCurveDepthMaterial, trackCurveDistanceMaterial;
+function subdivideTrackGeometry(mesh) {
+  const geometry = mesh.geometry, position = geometry.getAttribute('position');
+  if (!position || !mesh.isMesh || geometry.morphAttributes.position?.length) return;
+  const matrix = mesh.matrixWorld.elements,
+    coefficients = [Math.abs(matrix[2]), Math.abs(matrix[6]), Math.abs(matrix[10])];
+  if (mesh.isInstancedMesh) {
+    const transform = new ot(), combined = new ot();
+    coefficients.fill(0);
+    for (let index=0; index<mesh.count; index++) {
+      mesh.getMatrixAt(index, transform);combined.multiplyMatrices(mesh.matrixWorld,transform);
+      const elements=combined.elements;
+      [2,6,10].forEach((entry,axis)=>{coefficients[axis]=Math.max(coefficients[axis],Math.abs(elements[entry]));});
+    }
+  }
+  geometry.computeBoundingBox();
+  const extent = geometry.boundingBox.getSize(new R());
+  if (extent.x*coefficients[0]+extent.y*coefficients[1]+extent.z*coefficients[2]<=4) return;
+  // Only once at creation. Subdividing long triangles makes rails, whole train
+  // bodies and roof slabs follow the same curve rather than cutting its chord.
+  const bucket=coefficients.map(value=>value<1e-6?0:Math.pow(2,Math.ceil(Math.log2(value)))),
+    key=bucket.join(':'), cache=trackGeometryCache.get(geometry)||new Map();
+  trackGeometryCache.set(geometry,cache);
+  if(cache.has(key)){mesh.geometry=cache.get(key);return;}
+  const attributes=Object.entries(geometry.attributes).filter(([,attribute])=>!attribute.isInterleavedBufferAttribute),
+    names=attributes.map(([name])=>name), sizes=attributes.map(([,attribute])=>attribute.itemSize),
+    values=attributes.map(()=>[]), total=geometry.index?geometry.index.count:position.count,
+    groups=geometry.groups.length?geometry.groups:[{start:0,count:total,materialIndex:0}], newGroups=[];
+  const read=index=>attributes.map(([,attribute])=>Array.from({length:attribute.itemSize},(_,component)=>attribute.array[index*attribute.itemSize+component])),
+    emit=vertex=>vertex.forEach((attribute,index)=>values[index].push(...attribute)),
+    extents=[extent.x,extent.y,extent.z],
+    small=extents.reduce((sum,value,axis)=>sum+(value*bucket[axis]<=1?value*bucket[axis]:0),0),
+    axes=[0,1,2].filter(axis=>extents[axis]*bucket[axis]>1),
+    axisBudget=Math.max(.25,(4-small)/Math.max(1,axes.length)),
+    clip=(polygon,axis,boundary,greater)=>{
+      const result=[];
+      for(let index=0;index<polygon.length;index++){
+        const a=polygon[index],b=polygon[(index+1)%polygon.length],
+          av=a[0][axis]-boundary,bv=b[0][axis]-boundary,
+          inside=greater?av>=-1e-9:av<=1e-9,otherInside=greater?bv>=-1e-9:bv<=1e-9;
+        if(inside)result.push(a);
+        if(inside!==otherInside){
+          const blend=av/(av-bv);
+          result.push(a.map((attribute,attributeIndex)=>attribute.map((value,component)=>value+(b[attributeIndex][component]-value)*blend)));
+        }
+      }
+      return result;
+    },
+    triangle=(a,b,c)=>{
+      let polygons=[[a,b,c]];
+      for(const axis of axes){
+        const step=axisBudget/bucket[axis],next=[];
+        for(const polygon of polygons){
+          const minimum=Math.min(...polygon.map(vertex=>vertex[0][axis])),maximum=Math.max(...polygon.map(vertex=>vertex[0][axis]));
+          if(maximum-minimum<1e-9){next.push(polygon);continue;}
+          for(let slice=Math.floor(minimum/step);slice<=Math.floor((maximum-1e-10)/step);slice++){
+            const part=clip(clip(polygon,axis,slice*step,true),axis,(slice+1)*step,false);
+            if(part.length>=3)next.push(part);
+          }
+        }
+        polygons=next;
+      }
+      for(const polygon of polygons)for(let index=1;index<polygon.length-1;index++){
+        emit(polygon[0]);emit(polygon[index]);emit(polygon[index+1]);
+      }
+    };
+  for(const group of groups){
+    const start=values[0].length/3;
+    for(let index=group.start;index<Math.min(total,group.start+group.count);index+=3){
+      const ids=[0,1,2].map(offset=>geometry.index?geometry.index.getX(index+offset):index+offset);
+      triangle(...ids.map(read));
+    }
+    newGroups.push({start,count:values[0].length/3-start,materialIndex:group.materialIndex});
+  }
+  const result=geometry.clone();result.setIndex(null);result.clearGroups();
+  names.forEach((name,index)=>result.setAttribute(name,new be(values[index],sizes[index])));
+  for(const group of newGroups)result.addGroup(group.start,group.count,group.materialIndex);
+  result.computeBoundingSphere();result.userData.milkTrackSubdivided=true;
+  cache.set(key,result);mesh.geometry=result;
+}
+function prepareTrackScene(scene) {
+  if (!scene?.traverse) return;
+  scene.updateMatrixWorld(true);
+  scene.traverse(mesh=>{
+    if ((!mesh.isMesh && !mesh.isPoints) || mesh.userData.milkTrackPrepared) return;
+    mesh.userData.milkTrackPrepared=true;
+    subdivideTrackGeometry(mesh);
+    for(const material of Array.isArray(mesh.material)?mesh.material:[mesh.material])installTrackMaterial(material);
+    // CPU bounds describe the unbent layout; chunk visibility still controls
+    // distant scenery and shader-deformed meshes cannot use those stale bounds.
+    mesh.frustumCulled=false;
+    if(mesh.isMesh){
+      if(!trackCurveDepthMaterial){
+        trackCurveDepthMaterial=new ua({depthPacking:Ac});
+        trackCurveDistanceMaterial=new xa();
+        installTrackMaterial(trackCurveDepthMaterial);installTrackMaterial(trackCurveDistanceMaterial);
+      }
+      mesh.customDepthMaterial=trackCurveDepthMaterial;
+      mesh.customDistanceMaterial=trackCurveDistanceMaterial;
+    }
+  });
+}
 var Vn = new R();
 function iA(i, e, t, A, n, o) {
   let s = (2 * Math.PI * n) / 4,
@@ -26967,19 +27213,33 @@ function resetObstacleOcclusion(group) {
     setOcclusionOpacity(part, 1);
   if (group.userData.occlusionMaterials) setOcclusionOpacity(group, 1);
 }
-// V4 tunnel roofs are not walking surfaces. Below the solid roof top, clamp
-// through the approach and camera exit, including after interpolation. Flight
-// above the slab and snow keeps its normal elevated camera.
+// Keep the chase camera below a roof while travelling underneath it. The
+// walking surface uses the very same slab height as the model's landing test;
+// standing or flying above that surface restores the elevated camera.
 function tunnelCameraCeiling(state, cameraZ) {
   let ceiling = Infinity;
   for (let obstacle of state.obstacles) {
-    if (obstacle.type !== "tunnel" ||
-      (state.height || 0) >= obstacle.clearance + 1.125) continue;
+    if (!["tunnel", "bridge"].includes(obstacle.type) ||
+      (state.height || 0) >= structureRoofHeight(obstacle) - 0.04) continue;
     let depth = obstacle.distance - state.distance;
-    if (depth <= 12 && depth + obstacle.length >= -cameraZ - 2)
+    if (depth <= 18 && depth + obstacle.length >= -cameraZ - 2)
       ceiling = Math.min(ceiling, obstacle.clearance - 0.35);
   }
   return ceiling;
+}
+// Long-tunnel columns fade for the whole trip underneath their parent, not
+// only after one ray happens to cross the frog. Their warning colors remain
+// visible while quick lane changes no longer hide the actor behind a column.
+function pillarVisibilityOpacity(state, obstacle, camera) {
+  if ((state.height || 0) >= (obstacle.height ?? obstacle.clearance ?? 6.9)) return 1;
+  let parent = state.obstacles.find(candidate => candidate.id === obstacle.parentId &&
+    ["tunnel", "bridge"].includes(candidate.type));
+  if (parent) {
+    let depth = parent.distance - state.distance;
+    if ((state.height || 0) < structureRoofHeight(parent) - 0.04 &&
+        depth < 18 && depth + parent.length > -camera.z - 2) return 0.18;
+  }
+  return pillarBlocksFrog(state, obstacle, camera) ? 0.18 : 1;
 }
 // Segment/AABB intersection uses the camera-to-torso ray. Pillars elsewhere in
 // the tunnel remain opaque, even when another pillar hides the current lane.
@@ -27014,19 +27274,19 @@ function updateTunnelVisibility(obstacles, state, camera) {
     if (!model) continue;
     if (model.type === "pillar")
       setOcclusionOpacity(obstacle.group,
-        pillarBlocksFrog(state, model, camera.position) ? 0.18 : 1);
-    if (model.type !== "tunnel") continue;
+        pillarVisibilityOpacity(state, model, camera.position));
+    if (!["tunnel", "bridge"].includes(model.type)) continue;
     let depth = model.distance - state.distance,
-      belowRoof = (state.height || 0) < model.clearance + 1.125;
-    for (let section of obstacle.group.userData.tunnelSections || []) {
+      belowRoof = (state.height || 0) < structureRoofHeight(model) - 0.04;
+    for (let section of obstacle.group.userData.structureSections || []) {
       let interval = section.userData.tunnelSection,
-        near = belowRoof && depth + interval.start < 3 &&
-          depth + interval.end > -camera.position.z - 1;
-      setOcclusionOpacity(section, near ? 0.2 : 1);
+        near = belowRoof && depth + interval.start < 18 &&
+          depth + interval.end > -camera.position.z - 2;
+      setOcclusionOpacity(section, near ? 0.18 : 1);
     }
     let portal = obstacle.group.userData.tunnelPortal;
     if (portal) setOcclusionOpacity(portal,
-      belowRoof && depth < 18 && depth > -camera.position.z - 2 ? 0.22 : 1);
+      belowRoof && depth < 22 && depth > -camera.position.z - 3 ? 0.18 : 1);
   }
 }
 function YG(i) {
@@ -27037,21 +27297,22 @@ function YG(i) {
     o = Ce("#ffd996", { emissive: "#ffc672", emissiveIntensity: 0.8 }),
     s = Ce("#d45461"),
     { length: a, clearance: r } = i;
-  if (i.type === "tunnel") {
-    e.name = "snow-tunnel";
-    e.userData.tunnelSections = [];
-    e.userData.occlusionParts = [];
-    // Preserve the original wall, slab and snow dimensions. Short sections
-    // allow only nearby structure to fade while the distant exit stays solid.
-    for (let start = 0, index = 0; start < a; start += 5.5, index++) {
-      let length = Math.min(5.5, a - start),
-        center = -start - length / 2,
-        section = new We();
-      section.name = "tunnel-section-" + index;
-      section.userData.tunnelSection = { start, end: start + length };
-      e.add(section);
-      e.userData.tunnelSections.push(section);
-      e.userData.occlusionParts.push(section);
+  e.name = i.type === "tunnel" ? "snow-tunnel" : "winter-bridge";
+  e.userData.structureSections = [];
+  e.userData.tunnelSections = e.userData.structureSections;
+  e.userData.occlusionParts = [];
+  // Both types have real, continuous decks. Short independently faded pieces
+  // preserve a solid distant silhouette without covering the current view.
+  for (let start = 0, index = 0; start < a; start += 5.5, index++) {
+    let length = Math.min(5.5, a - start),
+      center = -start - length / 2,
+      section = new We();
+    section.name = i.type + "-section-" + index;
+    section.userData.tunnelSection = { start, end: start + length };
+    e.add(section);
+    e.userData.structureSections.push(section);
+    e.userData.occlusionParts.push(section);
+    if (i.type === "tunnel") {
       wA(section, t, [
         [-4.55, r / 2, center, 0.8, r, length],
         [4.55, r / 2, center, 0.8, r, length],
@@ -27072,30 +27333,26 @@ function YG(i) {
       }
       wA(section, n, supports, !0);
       wA(section, o, lamps);
-      prepareOcclusionGroup(section);
+    } else {
+      Ie(section, n, 0, r + 0.25, center, 10.6, 0.5, length);
+      Ie(section, A, 0, r + 0.59, center, 10.7, 0.16, length);
+      // Railings follow the outer edges; nothing crosses the walking lanes.
+      for (let side of [-1, 1]) {
+        Ie(section, n, side * 4.4, r + 1.05, center, 0.22, 1.8, length);
+        if (start <= a / 2 && start + length > a / 2)
+          Ie(section, t, side * 4.5, r / 2, -a / 2, 0.65, r, 3.2);
+      }
     }
-  } else {
-    for (let h of [-1, 1])
-      (Ie(e, t, h * 4.5, r / 2, -a / 2, 0.65, r, 3.2),
-        Ie(e, n, h * 4.4, r + 1.05, -a / 2, 0.22, 1.8, a + 3));
-    (Ie(e, n, 0, r + 0.25, -a / 2, 10.6, 0.5, a),
-      Ie(e, A, 0, r + 0.59, -a / 2, 10.7, 0.16, a));
-    for (let h = -5; h <= 5; h += 0.6)
-      (Ie(e, n, h, r + 1.1, -a / 2 + 4, 0.08, 1.25, 0.12),
-        Ie(e, n, h, r + 1.1, -a / 2 - 4, 0.08, 1.25, 0.12));
-    for (let h of [-a / 2 - 4, -a / 2 + 4])
-      Ie(e, n, 0, r + 1.7, h, 10.8, 0.15, 0.16);
+    prepareOcclusionGroup(section);
   }
-  let portal = i.type === "tunnel" ? new We() : e;
-  if (portal !== e) {
-    portal.name = "tunnel-entry-sign";
-    e.add(portal);
-    e.userData.tunnelPortal = portal;
-    e.userData.occlusionParts.push(portal);
-  }
+  let portal = new We();
+  portal.name = i.type + "-entry-sign";
+  e.add(portal);
+  e.userData.tunnelPortal = portal;
+  e.userData.occlusionParts.push(portal);
   let M = [];
   for (let h = -4; h <= 4; h += 0.5)
-    M.push([h, r + 0.1, 0.1, 0.24, 0.25, 0.13]);
+    M.push([h, r - 0.15, 0.1, 0.24, 0.25, 0.13]);
   wA(portal, s, M);
   let g = FA(512, 96, (h) => {
     ((h.fillStyle = "#25364c"),
@@ -27114,9 +27371,9 @@ function YG(i) {
       ));
   });
   return (
-    (Te(portal, new Ot(4.8, 0.9), new St({ map: g }), 0, r + 0.8, 0.22).castShadow =
+    (Te(portal, new Ot(4.8, 0.9), new St({ map: g }), 0, r - 0.6, 0.22).castShadow =
       !1),
-    portal !== e && prepareOcclusionGroup(portal),
+    prepareOcclusionGroup(portal),
     e
   );
 }
@@ -27882,6 +28139,9 @@ var Ds = class {
       (this.chaseHistory = []),
       (this.bullPhase = 0),
       (this.lastLaneX = 0),
+      (this.trackElevation = undefined),
+      (this.trackCameraPosition = null),
+      (this.camReady = !1),
       (this.frog.root.visible = !0));
   }
   makeObstacle(e) {
@@ -28165,7 +28425,7 @@ var Ds = class {
         (c.mesh.position.z += A ? t.speed * e : 0),
         c.mesh.scale.setScalar(c.life * 0.13));
     }
-    let M = UG(this.camera.aspect, t.groundHeight || 0);
+    let M = UG(this.camera.aspect, trackCameraElevation(this, t, e));
     (!o && !this.reduced && (M.fov += ((t.speed - AA) / ($A - AA)) * 3),
       this.camera.fov !== M.fov &&
         ((this.camera.fov = M.fov), this.camera.updateProjectionMatrix()),
@@ -28186,19 +28446,31 @@ var Ds = class {
         Math.max(M.target.y, (t.groundHeight || 0) + 1.45));
     }
     let g = 1 - Math.exp(-e * 6);
+    // Interpolate in the model's track frame, then bend the actual camera.
+    // Reusing a bent position as next frame's canonical input causes drift.
+    this.trackCameraPosition ??= this.camera.position.clone();
     (this.camReady
-      ? (this.camera.position.lerp(M.position, g), this.look.lerp(M.target, g))
-      : (this.camera.position.copy(M.position),
+      ? (this.trackCameraPosition.lerp(M.position, g), this.look.lerp(M.target, g))
+      : (this.trackCameraPosition.copy(M.position),
         this.look.copy(M.target),
         (this.camReady = !0)),
-      this.camera.position.y = Math.min(this.camera.position.y,
-        tunnelCameraCeiling(t, this.camera.position.z)),
+      this.trackCameraPosition.y = Math.min(this.trackCameraPosition.y,
+        tunnelCameraCeiling(t, this.trackCameraPosition.z)),
       Number.isFinite(ceiling) &&
         (this.look.y = Math.min(ceiling - 0.3,
-          Math.max(this.look.y, (t.groundHeight || 0) + 0.95))),
-      this.camera.lookAt(this.look),
-      updateTunnelVisibility(this.obstacles, t, this.camera),
-      this.renderer.render(this.scene, this.camera));
+          Math.max(this.look.y, (t.groundHeight || 0) + 0.95))));
+    updateTunnelVisibility(this.obstacles, t, {position:this.trackCameraPosition});
+    trackBendPosition(this.trackCameraPosition, t.distance, this.camera.position);
+    this.trackLook ??= new R();
+    trackBendPosition(this.look, t.distance, this.trackLook);
+    const nearHeading = trackCurveSample(t.distance).heading,
+      aheadHeading = trackCurveSample(t.distance + 26).heading,
+      bank = this.reduced ? 0 : Vt.clamp((aheadHeading-nearHeading)*0.18,-0.025,0.025);
+    this.camera.up.set(Math.sin(bank),Math.cos(bank),0);
+    this.camera.lookAt(this.trackLook);
+    setTrackCurveDistance(t.distance);
+    prepareTrackScene(this.scene);
+    this.renderer.render(this.scene, this.camera);
   }
 };
 var RG = {
@@ -28269,14 +28541,20 @@ var RG = {
     }
     resetRun() {
       this.clock = 0;
+      this.trackElevation = undefined;
     }
     celebrate(e) {
       this.particles.push({ x: e.x, y: e.y, d: -e.z, life: 0.4 });
     }
     project(e, t, A) {
-      let n = Math.max(0.5, A + this.camZ);
+      const point = trackBendPosition({x:e,y:t,z:-A}, this.trackDistance || 0),
+        camera = this.trackCamera || {x:0,y:this.camY,z:this.camZ},
+        forward = this.trackForward || {x:0,z:-1},
+        x = point.x-camera.x, z = point.z-camera.z,
+        n = Math.max(0.5,x*forward.x+z*forward.z),
+        lateral = -x*forward.z+z*forward.x;
       return {
-        x: this.w / 2 + (e * this.f) / n,
+        x: this.w / 2 + (lateral * this.f) / n,
         y: this.h * 0.255 + ((this.camY - t) * this.f) / n,
         s: this.f / n,
       };
@@ -28291,10 +28569,17 @@ var RG = {
         A && ((n.strokeStyle = A), (n.lineWidth = 1), n.stroke()));
     }
     face(e, t) {
-      this.poly(
-        e.map((A) => this.project(...A)),
-        t,
-      );
+      // Long roof/road/rail faces need curved edges in the 2D fallback too.
+      const points=[];
+      for(let index=0;index<e.length;index++){
+        const start=e[index],end=e[(index+1)%e.length],
+          steps=Math.max(1,Math.ceil(Math.abs(end[2]-start[2])/4));
+        for(let step=0;step<steps;step++){
+          const blend=step/steps;
+          points.push(this.project(...start.map((value,axis)=>value+(end[axis]-value)*blend)));
+        }
+      }
+      this.poly(points,t);
     }
     box(e, t, A, n, o, s, a, r = "#395169", M = "#e3d9df", front = !0) {
       if (A + s < -this.camZ + 1 || A > 190) return;
@@ -28488,13 +28773,12 @@ var RG = {
         n = e.clearance,
         o = e.length,
         ctx = this.ctx,
-        belowRoof = (t.height || 0) < n + 1.125,
-        nearTunnel = e.type === "tunnel" && belowRoof &&
-          A < 2 && A + o > -this.camZ + 1;
+        belowRoof = (t.height || 0) < structureRoofHeight(e) - 0.04,
+        nearTunnel = belowRoof && A < 18 && A + o > -this.camZ - 2;
       // Only the short section between the camera and frog becomes translucent.
       // Distant sections retain their solid silhouette and entrance/exit markers.
       ctx.save();
-      if (nearTunnel) ctx.globalAlpha *= 0.24;
+      if (nearTunnel) ctx.globalAlpha *= 0.18;
       for (let side of [-1, 1])
         this.box(
           side * 4.45,
@@ -28510,13 +28794,14 @@ var RG = {
       ctx.restore();
       if (e.type === "tunnel") {
         ctx.save();
-        if (nearTunnel) ctx.globalAlpha *= 0.16;
-        this.box(0, n, A, 9.5, 0.45, o, "#727a98", "#54617d", "#d7e6ef");
+        if (nearTunnel) ctx.globalAlpha *= 0.18;
+        this.box(0, n, A, 9.9, 0.88, o, "#727a98", "#54617d", "#d7e6ef");
+        this.box(0, n + 0.875, A, 10.4, 0.25, o, "#d7e6ef", "#c7d7e3", "#e4e7f3");
         ctx.restore();
         // Tunnel segments participate in depth sorting so their exit remains
         // visible while the player and trains travel through a long tunnel.
         ctx.save();
-        if (nearTunnel) ctx.globalAlpha *= 0.25;
+        if (nearTunnel) ctx.globalAlpha *= 0.18;
         for (let arch of [A, ...(e.exit ? [A + o - 0.28] : [])]) {
           if (arch <= -this.camZ + 1) continue;
           for (let side of [-1, 1])
@@ -28535,16 +28820,18 @@ var RG = {
         }
         ctx.restore();
       } else {
-        this.box(0, n, A, 10, 0.4, o, "#498397", "#37566f", "#dce6ef");
-        for (let post = -4.5; post < 5; post += 0.7)
-          this.box(post, n + 0.4, A, 0.08, 1, 0.1, "#47869a");
-        this.box(0, n + 1.4, A, 10, 0.12, 0.12, "#426b80");
+        ctx.save();
+        if (nearTunnel) ctx.globalAlpha *= 0.18;
+        this.box(0, n, A, 10.6, 0.5, o, "#498397", "#37566f", "#dce6ef");
+        this.box(0, n + 0.51, A, 10.7, 0.16, o, "#d7e6ef", "#c7d7e3", "#e4e7f3");
+        for (let side of [-1, 1])
+          this.box(side * 4.4, n + 0.15, A, 0.22, 1.8, o, "#47869a");
+        ctx.restore();
       }
       if (e.entrance === !1 || A <= 3) return;
-      let sign = this.project(0, n + 0.75, A);
+      let sign = this.project(0, n - 0.6, A);
       ctx.save();
-      if (e.type === "tunnel" && belowRoof && A < 18)
-        ctx.globalAlpha *= 0.25;
+      if (belowRoof && A < 22) ctx.globalAlpha *= 0.18;
       ctx.fillStyle = "#243851";
       ctx.fillRect(
         sign.x - sign.s * 2.4,
@@ -28572,9 +28859,7 @@ var RG = {
         width = e.width ?? 1.3,
         height = e.height ?? e.clearance ?? 6.9,
         length = e.length ?? 1.2;
-      // The shared ray test fades only the pillar between the view and frog.
-      let bodyAlpha = pillarBlocksFrog(t, e, new R(0, this.camY, this.camZ))
-        ? 0.18 : 1;
+      let bodyAlpha = pillarVisibilityOpacity(t, e, new R(0, this.camY, this.camZ));
       let ctx = this.ctx;
       ctx.save();
       ctx.globalAlpha *= bodyAlpha;
@@ -28859,9 +29144,15 @@ var RG = {
         s = n / o < 0.8;
       ((this.f = o * 0.84),
         (this.camZ = s ? 17 : 11.8),
-        (this.camY = (s ? 6.4 : 5.5) + t.groundHeight * 0.68));
+        (this.camY = (s ? 6.4 : 5.5) + trackCameraElevation(this, t, e) * 0.68));
       // Stay below the ceiling from the approach through the camera's exit.
       this.camY = Math.min(this.camY, tunnelCameraCeiling(t, this.camZ));
+      this.trackDistance=t.distance;
+      this.trackCamera=trackBendPosition({x:0,y:this.camY,z:this.camZ},t.distance);
+      const trackAim=trackBendPosition({x:0,y:1.45,z:-18},t.distance),
+        dx=trackAim.x-this.trackCamera.x,dz=trackAim.z-this.trackCamera.z,
+        inverseLength=1/Math.hypot(dx,dz);
+      this.trackForward={x:dx*inverseLength,z:dz*inverseLength};
       let a = A.createLinearGradient(0, 0, 0, o * 0.65);
       (a.addColorStop(0, "#384768"),
         a.addColorStop(0.5, "#9d99c0"),
@@ -28965,7 +29256,7 @@ var RG = {
             }
             return parts;
           }
-          if (M.type !== "tunnel")
+          if (!["tunnel", "bridge"].includes(M.type))
             return [
               {
                 d: M.distance - t.distance,
@@ -29004,8 +29295,10 @@ var RG = {
       // From a train roof, draw its solid body before the elevated actor and
       // roof collectibles. This prevents nearer body slices hiding the frog.
       const elevatedTrain = entry => entry.kind === "obstacle" &&
-        entry.o.type === "train" &&
-        t.height >= (entry.o.roofHeight ?? ui) - 0.15;
+        ((entry.o.type === "train" &&
+          t.height >= (entry.o.roofHeight ?? ui) - 0.15) ||
+         (["tunnel", "bridge"].includes(entry.o.type) &&
+          t.height >= structureRoofHeight(entry.o) - 0.04));
       r = [...r.filter(elevatedTrain), ...r.filter(entry => !elevatedTrain(entry))];
       for (let M of r) {
         if (M.kind === "obstacle" && M.o.type === "train") {
